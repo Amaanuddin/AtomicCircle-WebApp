@@ -1,19 +1,39 @@
 module.exports = {
   siteMetadata: {
-    title: 'Frontend Masters Gatsby Workshop',
+    title: 'Atomic Circle',
     description:
       'A site we built together during a full-day Frontend Masters Gatsby workshop!',
+    logo: '/logo.svg',
+    url: 'https://atomiccircle.com',
+    socials: {
+      instagram: 'https://www.instagram.com/atomic.circle/',
+      facebook: 'https://www.facebook.com/circleatomic',
+      twitter: 'https://twitter.com/CircleAtomic',
+    },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Atomic Circle`,
+        short_name: `Atomic Circle`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#dc143c`,
+        display: `standalone`,
+        icon: `static/mobileIcon.png`,
+      },
+    },
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-remark-reading-time',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/components/layout.js'),
+          default: require.resolve('./src/components/layout.jsx'),
         },
         gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
         plugins: [{ resolve: 'gatsby-remark-images' }],
@@ -36,7 +56,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-instagram',
       options: {
-        username: 'gatsbyjs',
+        username: 'atomic.circle',
       },
     },
     {
@@ -46,6 +66,21 @@ module.exports = {
         disable: !process.env.ANALYZE_BUNDLE_SIZE,
         generateStatsFile: true,
         analyzerMode: 'static',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        precachePages: ['/', `/blog/*`, '/about/', '/404/'],
+        workboxConfig: {
+          globPatterns: ['**/*'],
+        },
       },
     },
   ],
