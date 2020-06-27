@@ -39,12 +39,12 @@ const usePosts = () => {
     title: post.frontmatter.title,
     author: {
       name: post.frontmatter.author,
-      image: post.frontmatter.authorImage,
+      image: post.frontmatter.authorImage
     },
     slug: post.frontmatter.slug,
     image: post.frontmatter.image,
     excerpt: post.excerpt,
-    readingTime: post.fields.readingTime.text,
+    readingTime: post.fields.readingTime.text
   }));
 };
 

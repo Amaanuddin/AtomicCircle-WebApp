@@ -8,8 +8,8 @@ module.exports = {
     socials: {
       instagram: 'https://www.instagram.com/atomic.circle/',
       facebook: 'https://www.facebook.com/circleatomic',
-      twitter: 'https://twitter.com/CircleAtomic',
-    },
+      twitter: 'https://twitter.com/CircleAtomic'
+    }
   },
   plugins: [
     {
@@ -21,8 +21,8 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#dc143c`,
         display: `standalone`,
-        icon: `static/mobileIcon.png`,
-      },
+        icon: `static/mobileIcon.png`
+      }
     },
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
@@ -33,31 +33,31 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/components/layout.jsx'),
+          default: require.resolve('./src/components/layout.jsx')
         },
         gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
-        plugins: [{ resolve: 'gatsby-remark-images' }],
-      },
+        plugins: [{ resolve: 'gatsby-remark-images' }]
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path: 'posts',
-      },
+        path: 'posts'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: 'images',
-      },
+        path: 'images'
+      }
     },
     {
       resolve: 'gatsby-source-instagram',
       options: {
-        username: 'atomic.circle',
-      },
+        username: 'atomic.circle'
+      }
     },
     {
       resolve: 'gatsby-plugin-webpack-bundle-analyzer',
@@ -65,23 +65,23 @@ module.exports = {
         production: true,
         disable: !process.env.ANALYZE_BUNDLE_SIZE,
         generateStatsFile: true,
-        analyzerMode: 'static',
-      },
+        analyzerMode: 'static'
+      }
     },
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
-        lang: 'en',
-      },
+        lang: 'en'
+      }
     },
     {
       resolve: 'gatsby-plugin-offline',
       options: {
         precachePages: ['/', `/blog/*`, '/about/', '/404/'],
         workboxConfig: {
-          globPatterns: ['**/*'],
-        },
-      },
-    },
-  ],
+          globPatterns: ['**/*']
+        }
+      }
+    }
+  ]
 };

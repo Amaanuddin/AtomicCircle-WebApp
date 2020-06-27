@@ -24,7 +24,7 @@ const useInstagram = () => {
     ...node.localFile.childImageSharp,
     id: node.id,
     caption: node.caption,
-    username: node.username,
+    username: node.username
   }));
 };
 

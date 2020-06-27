@@ -6,16 +6,16 @@ import SocialIcon from './socialIcon';
 export const navData = [
   {
     link: '/',
-    title: 'Home',
+    title: 'Home'
   },
   {
     link: '/about/',
-    title: 'About',
+    title: 'About'
   },
   {
     link: '/contact/',
-    title: 'Contact',
-  },
+    title: 'Contact'
+  }
 ];
 
 const Header = ({ site, isHome }) => {
@@ -39,7 +39,7 @@ const Header = ({ site, isHome }) => {
         background: isHome
           ? `linear-gradient(to bottom, transparent, 80%, black), url(${image.sharp.fluid.srcWebp}) center fixed`
           : 'black',
-        backgroundSize: 'cover',
+        backgroundSize: 'cover'
       }}
     >
       <div className="container">

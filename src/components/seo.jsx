@@ -15,7 +15,7 @@ const RederSEO = props => {
     'travel',
     'stories',
     'friends',
-    'atomiccircle',
+    'atomiccircle'
   ];
   return (
     <Helmet
@@ -26,10 +26,10 @@ const RederSEO = props => {
         { property: 'og:description', content: description || seo.description },
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: image },
-        { property: 'og:url', content: url || seo.url },
+        { property: 'og:url', content: url || seo.url }
       ].concat({
         name: 'keywords',
-        content: metaKeywords.join(', '),
+        content: metaKeywords.join(', ')
       })}
     />
   );
