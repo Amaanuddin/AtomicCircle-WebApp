@@ -22,7 +22,10 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#dc143c`,
         display: `standalone`,
-        icon: `static/mobileIcon.png`
+        icon: `static/mobileIcon.png`,
+        icon_options: {
+          purpose: `maskable`
+        }
       }
     },
     'gatsby-plugin-remove-console',
