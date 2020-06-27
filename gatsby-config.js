@@ -11,6 +11,7 @@ module.exports = {
       twitter: 'https://twitter.com/CircleAtomic'
     }
   },
+  pathPrefix: '/AtomicCircle-WebApp',
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
