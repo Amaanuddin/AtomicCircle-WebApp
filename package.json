@@ -11,7 +11,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build",
+    "analyze": "cross-env ANALYZE_BUNDLE_SIZE=true gatsby build",
     "deploy-gh": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "cross-env": "^7.0.2",
     "gh-pages": "^3.1.0",
     "prettier": "^1.19.1"
   },
