@@ -1,7 +1,7 @@
 {
-  "name": "frontendmasters-gatsby",
+  "name": "atomiccircle-blog",
   "private": true,
-  "description": "Bare-bones starter for the Gatsby Frontend Masters workshop.",
+  "description": "AtomicCircle's blogging web app.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -28,6 +28,7 @@
     "gatsby-plugin-mdx": "^1.0.59",
     "gatsby-plugin-offline": "^3.2.13",
     "gatsby-plugin-react-helmet": "^3.3.6",
+    "gatsby-plugin-remove-console": "0.0.2",
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "gatsby-remark-images": "^3.1.35",
@@ -40,11 +41,12 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "gh-pages": "^3.1.0",
     "prettier": "^1.19.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jlengstorf/frontendmasters-gatsby"
+    "url": "https://github.com/amaanuddin/AtomicCircle-WebApp"
   }
 }

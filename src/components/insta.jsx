@@ -58,6 +58,7 @@ const Insta = () => {
         href={`https://instagram.com/${username}`}
         target="_blank"
         rel="noopener noreferrer"
+        style={{ fontSize: '16px', color: '#004cbf' }}
       >
         See more on Instagram &rarr;
       </a>

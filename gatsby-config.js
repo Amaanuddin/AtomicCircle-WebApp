@@ -25,6 +25,7 @@ module.exports = {
         icon: `static/mobileIcon.png`
       }
     },
+    'gatsby-plugin-remove-console',
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
