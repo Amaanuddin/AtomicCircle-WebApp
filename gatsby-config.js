@@ -11,6 +11,7 @@ module.exports = {
       twitter: 'https://twitter.com/CircleAtomic'
     }
   },
+  // remove pathprefix after deploying to atomiccircle
   pathPrefix: '/AtomicCircle-WebApp',
   plugins: [
     {
@@ -22,10 +23,11 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#dc143c`,
         display: `standalone`,
-        icon: `static/mobileIcon.png`,
-        icon_options: {
-          purpose: `maskable`
-        }
+        icon: `static/mobileIcon.png`
+        // Include this after deploying this to atomiccircle and check if the app is installable
+        // icon_options: {
+        //   purpose: `maskable`
+        // }
       }
     },
     'gatsby-plugin-remove-console',
