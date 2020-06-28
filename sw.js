@@ -28,15 +28,15 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "420b75293bea171ba969dbd4081dd60d"
+    "revision": "fffa7c898b392b20b5a275a04703684d"
   },
   {
     "url": "404/index.html",
-    "revision": "7ec971685c85c473d5afa5191f3f994f"
+    "revision": "59433a891649613489d5317ba4716c10"
   },
   {
     "url": "about/index.html",
-    "revision": "7fffeb84034934a6cf407bc193297f70"
+    "revision": "1d55adae790b24338bbe9edca67c979e"
   },
   {
     "url": "app-374ca1609967fe2b6bf1.js"
@@ -68,19 +68,19 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/another-post/index.html",
-    "revision": "d0948b5b91f01b05bc09bcc2bcc990d9"
+    "revision": "0dac6af9b3c2d145f725d0d44fa4ed8d"
   },
   {
     "url": "blog/hello-world-1/index.html",
-    "revision": "a020472e2d0a1f465addf02ed412f1dd"
+    "revision": "bd43131529ceef295e66b42b1386f219"
   },
   {
     "url": "blog/hello-world/index.html",
-    "revision": "7990b0c88cd5eca938db0f329dc779f7"
+    "revision": "0b0425d988af304e58517f99688c600d"
   },
   {
     "url": "chunk-map.json",
-    "revision": "8739ac524f4055e18c844d7cfd35b20a"
+    "revision": "0dc4a16d7abb8ef8afe0e3ede53599a1"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-7c31e2436cade51cbcda.js"
@@ -123,6 +123,13 @@ self.__precacheManifest = [
   {
     "url": "component---src-pages-index-jsx-01155c2a82a80b003283.js.map",
     "revision": "a775c167b06f722107767badd73fd062"
+  },
+  {
+    "url": "component---src-pages-index-jsx-3d2c4756f75cc4c597a1.js"
+  },
+  {
+    "url": "component---src-pages-index-jsx-3d2c4756f75cc4c597a1.js.map",
+    "revision": "b1cc6aaf969f52b8d2eae11349ece93e"
   },
   {
     "url": "component---src-pages-index-jsx-5020d538ea40813780df.js"
@@ -168,7 +175,7 @@ self.__precacheManifest = [
   },
   {
     "url": "contact/index.html",
-    "revision": "ebbe09e83cd3467721ac58a7e6c8996f"
+    "revision": "ce99950625d247091fa6502e59316b9e"
   },
   {
     "url": "d60dda46508263992df82d65629de7b6b4737ae1-3fb97d1871d5a2a89a15.js"
@@ -248,7 +255,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "a44696836fc5cb28dc3234ef689c18bf"
+    "revision": "9bc211a023f9140d043f467e56046af0"
   },
   {
     "url": "logo.svg",
@@ -256,7 +263,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "ccc9354890a5e902b2ed0de2224d322f"
+    "revision": "d51b7e71641a5d5be235e41d061343aa"
   },
   {
     "url": "mobileIcon.png",
@@ -264,7 +271,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f2fba6d88538854364740dd5d850d989"
+    "revision": "a2219b4edf97e99d281c6052c8965ed6"
   },
   {
     "url": "page-data/404.html/page-data.json",
@@ -280,19 +287,19 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "4e6eabea25ea6ad400e5c0b5f84279fa"
+    "revision": "00330da77bdd8986e3f7f5d5f7896dc9"
   },
   {
     "url": "page-data/blog/another-post/page-data.json",
-    "revision": "0424c98685ad7be48fbfca0e837dc75a"
+    "revision": "1ef483e19b5ebef660d1f1a6fec59a90"
   },
   {
     "url": "page-data/blog/hello-world-1/page-data.json",
-    "revision": "8f4e019ee3d3afb05fc23c697ded82f1"
+    "revision": "ace961e99477ed857a243f013fa6168e"
   },
   {
     "url": "page-data/blog/hello-world/page-data.json",
-    "revision": "6ebab9f842f390122978cc3e32cc337b"
+    "revision": "c52228adc3ffdfaed5432fad10aa1863"
   },
   {
     "url": "page-data/contact/page-data.json",
@@ -1071,8 +1078,15 @@ self.__precacheManifest = [
     "revision": "1b603a31f1efd27c39ab44d3f066a274"
   },
   {
+    "url": "webpack-runtime-cde7cbcafcc42c6e320f.js"
+  },
+  {
+    "url": "webpack-runtime-cde7cbcafcc42c6e320f.js.map",
+    "revision": "a70caa7cb741b46425486e1c06d0e556"
+  },
+  {
     "url": "webpack.stats.json",
-    "revision": "29161d727ba29d4e9734734c1401fda0"
+    "revision": "a9b07251a13f14aed9c564409a22b842"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -1160,12 +1174,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/AtomicCircle-WebApp`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-75129c4db3f4b34cae93.js`))) {
+  if (!resources || !(await caches.match(`/AtomicCircle-WebApp/app-4f5d36ca0f99a5686a02.js`))) {
     return await fetch(event.request)
   }
 
@@ -1178,7 +1192,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/AtomicCircle-WebApp/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
