@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://atomiccircle.com/sitemap.xml
+Host: https://atomiccircle.com
