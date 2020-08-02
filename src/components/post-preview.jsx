@@ -3,12 +3,25 @@ import { Link } from 'gatsby';
 import Image from 'gatsby-image';
 
 import BackgroundImage from 'gatsby-background-image';
+// import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 
 const PostPreview = ({ post }) => {
   const url = `blog/${post.slug}/`;
 
   return (
-    <Link to={url} className="post-card">
+    <Link
+      to={url}
+      className="post-card"
+      onClick={() => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'Button Click',
+          category: 'Blog',
+          action: 'Click',
+          label: post.slug
+        });
+      }}
+    >
       <header className="post-card-header">
         {post.image && (
           <BackgroundImage

@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Atomic Circle',
+    alternateName: 'Atomiccircle',
     description:
       'A site we built together during a full-day Frontend Masters Gatsby workshop!',
     logo: '/logo.svg',
@@ -9,11 +10,35 @@ module.exports = {
       instagram: 'https://www.instagram.com/atomic.circle/',
       facebook: 'https://www.facebook.com/circleatomic',
       twitter: 'https://twitter.com/CircleAtomic'
-    }
+    },
+    siteUrl: 'https://atomiccircle.com'
   },
   // remove pathprefix after deploying to atomiccircle
   pathPrefix: '/AtomicCircle-WebApp',
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-MD8M9QD',
+        includeInDevelopment: false,
+        routeChangeEventName: 'atomiccircle-route-change'
+      }
+    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     // The property ID; the tracking code won't be generated without it
+    //     trackingId: 'UA-126130467-1',
+    //     // Defines where to place the tracking script - `true` in the head and `false` in the body
+    //     head: true,
+    //     // Setting this parameter is optional
+    //     anonymize: true,
+    //     // Setting this parameter is also optional
+    //     respectDNT: true,
+    //     // Delays sending pageview hits on route update (in milliseconds)
+    //     pageTransitionDelay: 0
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -36,6 +61,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-remark-reading-time',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
@@ -44,6 +70,16 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
         plugins: [{ resolve: 'gatsby-remark-images' }]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Noto Sans SC`
+          }
+        ]
       }
     },
     {
@@ -88,6 +124,14 @@ module.exports = {
         workboxConfig: {
           globPatterns: ['**/*']
         }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://atomiccircle.com',
+        sitemap: 'https://atomiccircle.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     }
   ]

@@ -6,6 +6,7 @@ const useSiteMetadata = () => {
       site {
         siteMetadata {
           title
+          alternateName
           description
           logo
           url

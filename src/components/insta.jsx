@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'gatsby-image';
 import { css } from '@emotion/core';
 import useInstagram from '../hooks/use-instagram';
+// import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const Insta = () => {
   const instaPhotos = useInstagram();

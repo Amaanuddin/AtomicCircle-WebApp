@@ -23,7 +23,7 @@ const Header = ({ site, isHome }) => {
     query {
       image: file(relativePath: { eq: "Image.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 2560, webpQuality: 90) {
+          fluid(maxWidth: 2560, webpQuality: 85) {
             srcWebp
           }
         }

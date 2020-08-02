@@ -10,7 +10,7 @@ const useInstagram = () => {
           username
           localFile {
             childImageSharp {
-              fluid(maxWidth: 300, maxHeight: 300) {
+              fluid(maxWidth: 300, maxHeight: 300, webpQuality: 70) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
@@ -19,6 +19,7 @@ const useInstagram = () => {
       }
     }
   `);
+  // src
 
   return data.allInstaNode.nodes.map(node => ({
     ...node.localFile.childImageSharp,

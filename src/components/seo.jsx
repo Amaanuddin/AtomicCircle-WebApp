@@ -9,6 +9,15 @@ const SEO = props => {
 
 const RederSEO = props => {
   const { data: seo, title, description, image, url, keywords } = props;
+  const schemaMarkup = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: seo.title,
+    alternateName: seo.alternateName,
+    url: seo.url,
+    logo: seo.url + seo.logo,
+    sameAs: [seo.socials.facebook, seo.socials.twitter, seo.socials.instragram]
+  };
   const metaKeywords = keywords || [
     'atomic circle',
     'blog',
@@ -31,7 +40,13 @@ const RederSEO = props => {
         name: 'keywords',
         content: metaKeywords.join(', ')
       })}
-    />
+    >
+      {schemaMarkup && (
+        <script type="appplication/ld+json">
+          {JSON.stringify(schemaMarkup)}
+        </script>
+      )}
+    </Helmet>
   );
 };
 
